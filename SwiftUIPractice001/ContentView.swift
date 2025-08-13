@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var bgColor: Color = .red
     var body: some View {
         ZStack {
-            Color(bgColor)
+            Color(bgColor).ignoresSafeArea()
             VStack {
                         Text(txt)
                             .font(.system(size: 44, weight: .bold))
@@ -24,7 +24,7 @@ struct ContentView: View {
                             .frame(width: 200, height: 200)
                             .foregroundStyle(.yellow)
                         Button("Change Text") {
-                            txt = txt == "Hello, SwiftUI!" ? "Hello, Apple!" : "Hello, SwiftUI!"
+                            txt = txt == "Hello, SwiftUI!" ? "Hello iOS" : "Hello, SwiftUI!"
                         }
                         .padding(.horizontal,15)
                         .padding(.vertical,10)
